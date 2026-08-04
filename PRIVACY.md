@@ -1,26 +1,28 @@
-# RepoLingo 隐私说明
+# RepoLingo Privacy Notice
 
-生效日期：2026-08-04
+[简体中文](PRIVACY.zh-CN.md)
 
-RepoLingo 的默认工作方式是浏览器内置本地翻译。扩展不运营云端服务器，不创建用户账号，不采集遥测、分析数据、广告标识符或长期翻译历史。
+Effective: August 4, 2026
 
-## 本地模式
+RepoLingo uses the browser's built-in local translation by default. The project does not operate a cloud service, create user accounts, collect telemetry or analytics, use advertising identifiers, or retain a long-term translation history.
 
-- GitHub 页面文本不会发送给 RepoLingo 作者或第三方翻译 API。
-- 浏览器可能按需下载并管理自己的语言包；这由 Chrome 或 Edge 的内置 Translator API 完成。
-- 翻译结果只保留在当前页面内存，关闭或刷新页面后不会作为历史记录保存。
-- 扩展仅保存显示偏好、当前仓库偏好和用户主动配置的增强服务设置。
+## Local mode
 
-## 可选增强模式
+- GitHub page text is not sent to the RepoLingo maintainer or a third-party translation API.
+- Chrome or Edge may download and manage its own language pack through the built-in Translator API.
+- Translations remain in memory for the current page and are not saved as browsing history after a refresh or close.
+- The extension stores only display preferences, per-repository preferences, and settings that the user explicitly configures.
 
-只有用户主动启用 OpenAI、Gemini 或 DeepSeek、填写 API Key 并授予对应服务域名权限后，RepoLingo 才会向该服务发送请求。发送内容是经过占位符保护的自然语言段落；代码、命令、URL、路径、版本号、SHA、参数和受保护术语会被替换为占位符。
+## Optional enhanced mode
 
-API Key 保存在浏览器扩展的受信任本地存储中。内容脚本和 GitHub 页面无法直接读取该存储。第三方服务如何处理请求，受其各自的服务条款与隐私政策约束。
+RepoLingo contacts OpenAI, Gemini, or DeepSeek only after the user enables enhanced translation, enters an API key, and grants the matching optional host permission. Requests contain protected natural-language segments. Code, commands, URLs, paths, versions, commit SHAs, flags, identifiers, and protected terms are replaced with placeholders before transmission.
 
-## 权限用途
+API keys are stored in trusted browser-extension local storage. GitHub pages and RepoLingo content scripts cannot read that storage directly. Each provider processes requests under its own terms and privacy policy.
 
-- `storage`：保存显示偏好和可选增强服务配置。
-- `https://github.com/*`：识别和呈现 GitHub 页面中的可翻译自然语言。
-- 可选服务域名权限：仅在用户启用对应增强服务时申请，用于直接发送翻译请求。
+## Permissions
 
-RepoLingo 不出售或共享个人数据。若隐私行为发生实质变化，将在发布说明和本文件中明确记录。
+- `storage`: saves display preferences and optional enhanced-translation settings.
+- `https://github.com/*`: identifies and renders translatable natural-language content on GitHub.
+- Optional provider hosts: requested only when the user enables that provider, and used only to send translation requests directly.
+
+RepoLingo does not sell or share personal data. Material privacy changes will be documented in both the release notes and this notice.

@@ -1,42 +1,42 @@
-# RepoLingo 支持说明
+# RepoLingo Support
 
-## 使用问题
+[简体中文](SUPPORT.zh-CN.md)
 
-提交 Issue 前请依次确认：
+## Before opening an Issue
 
-1. 浏览器已更新到受支持版本。
-2. 问题出现在 `https://github.com/` 页面。
-3. 已刷新页面并重新打开 RepoLingo 面板。
-4. 使用的是最新 GitHub Release。
-5. 控制台或截图中没有 API Key、私有仓库内容和个人信息。
+1. Update to a supported browser version.
+2. Confirm that the problem occurs on `https://github.com/`.
+3. Refresh the page and reopen the RepoLingo panel.
+4. Install the latest GitHub Release.
+5. Remove API keys, private-repository content, and personal information from screenshots and logs.
 
-## 常见问题
+## Frequently asked questions
 
-### 必须配置 API Key 吗？
+### Is an API key required?
 
-不需要。本地翻译是默认且完整的使用方式。增强翻译只服务于主动追求更高复杂语义质量的用户。
+No. Local translation is the complete default experience. Enhanced translation is only for users who explicitly want a provider to handle more complex technical language.
 
-### 为什么显示本地翻译不可用？
+### Why is local translation unavailable?
 
-浏览器可能尚未提供 Translator API、版本过旧，或语言包暂时不可下载。请更新 Chrome/Edge 后重试。RepoLingo 不会因此自动调用付费服务。
+The browser may not expose the Translator API yet, may be outdated, or may be temporarily unable to download the language pack. Update Chrome or Edge and try again. RepoLingo never falls back to a paid service automatically.
 
-### 为什么某一段没有翻译？
+### Why was a block not translated?
 
-该内容可能属于代码、Diff、日志、文件树、输入框或 GitHub 操作区域；也可能未通过占位符和质量校验。此时保留原文是预期的安全行为。
+It may be code, a Diff, a log, the file tree, a form, or a GitHub control. It may also have failed placeholder or quality validation. Preserving the original is the expected safe behavior in these cases.
 
-### 翻译结果会保存吗？
+### Are translations saved?
 
-译文只保留在当前页面内存中，刷新或关闭后不会作为历史记录长期保存。显示偏好和用户主动配置的设置会保存在扩展本地存储。
+Translations remain in memory for the current page and are not kept as long-term history after a refresh or close. Display preferences and settings explicitly configured by the user remain in extension local storage.
 
-### 增强翻译由谁付费？
+### Who pays for enhanced translation?
 
-RepoLingo 不收费也不提供代理服务。用户自行配置的第三方 API 可能按服务商规则计费。
+RepoLingo does not charge users or proxy provider requests. A third-party API configured by the user may charge under that provider's own terms.
 
-## 在哪里反馈
+## Where to ask
 
-- 可复现 Bug 或翻译问题：使用 Bug Issue 模板。
-- 新功能建议：使用 Feature Issue 模板。
-- 安全漏洞：使用 GitHub Private vulnerability reporting，切勿公开披露。
-- 贡献代码或语料：阅读 `CONTRIBUTING.md` 后提交 Pull Request。
+- Reproducible bugs and translation errors: use the Bug Report template.
+- Feature proposals: use the Feature Request template.
+- Security vulnerabilities: use GitHub private vulnerability reporting; never disclose them publicly first.
+- Code or corpus contributions: read `CONTRIBUTING.md` and open a Pull Request.
 
-维护者会优先处理可复现、附带版本与上下文、且不包含敏感信息的报告。
+Reports with clear reproduction steps, versions, and context—and without sensitive information—are the easiest to investigate.

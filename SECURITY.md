@@ -1,20 +1,22 @@
-# 安全政策
+# Security Policy
 
-## 支持版本
+[简体中文](SECURITY.zh-CN.md)
 
-当前仅维护最新稳定版本。请先确认问题可在最新 Release 中复现。
+## Supported versions
 
-## 报告漏洞
+Only the latest stable release is supported. Please confirm that the issue is reproducible with the newest GitHub Release.
 
-请使用 GitHub 仓库的 **Private vulnerability reporting** 功能提交安全问题，不要创建公开 Issue。报告请包含：
+## Reporting a vulnerability
 
-- 受影响版本与浏览器版本；
-- 可复现步骤或最小证明；
-- 预期影响，尤其是 API Key 泄漏、权限绕过、HTML/脚本注入或跨页面数据暴露；
-- 你建议的披露时间线。
+Use GitHub's [private vulnerability reporting](https://github.com/agilawiegel-ux/repolingo-extension/security/advisories/new) instead of opening a public Issue. Include:
 
-维护者会尽快确认收到报告，并在完成修复与发布前协调披露。请勿在未经授权的系统上进行测试。
+- the affected RepoLingo and browser versions;
+- reproducible steps or a minimal proof of concept;
+- the expected impact, especially for API-key exposure, permission bypasses, HTML or script injection, or cross-page data disclosure;
+- your proposed disclosure timeline.
 
-## 安全边界
+The maintainer will acknowledge the report as soon as practical and coordinate disclosure after a fix and release are ready. Do not test against systems you do not own or have permission to assess.
 
-RepoLingo 把网页内容和模型输出都视为不可信数据。模型输出不会作为 HTML 执行；API Key 只能由受信任的扩展页面和后台 Service Worker 访问。安全报告应聚焦能够突破这些边界的行为。
+## Security boundaries
+
+RepoLingo treats both webpage content and model output as untrusted data. Model output is never executed as HTML. API keys are available only to trusted extension pages and the background service worker. Security reports should focus on behavior that can cross these boundaries.

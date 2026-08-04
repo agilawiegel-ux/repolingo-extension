@@ -1,39 +1,39 @@
-name: Bug 报告
-description: 报告可复现的功能或翻译问题
+name: Bug report
+description: Report a reproducible product or translation problem
 title: "[Bug] "
 labels: [bug]
 body:
   - type: markdown
     attributes:
-      value: 安全漏洞请使用私密漏洞报告，不要在这里公开。
+      value: Please use private vulnerability reporting for security issues. Do not disclose them here.
   - type: input
     id: version
     attributes:
-      label: RepoLingo 与浏览器版本
+      label: RepoLingo and browser versions
       placeholder: RepoLingo 0.1.0 / Chrome 138
     validations:
       required: true
   - type: dropdown
     id: page
     attributes:
-      label: 页面类型
-      options: [README, Issue, Pull Request, Discussion, Release, 设置或弹窗]
+      label: GitHub page type
+      options: [README, Issue, Pull Request, Discussion, Release, Settings or popup]
     validations:
       required: true
   - type: textarea
     id: steps
     attributes:
-      label: 复现步骤
+      label: Reproduction steps
     validations:
       required: true
   - type: textarea
     id: expected
     attributes:
-      label: 预期与实际结果
+      label: Expected and actual behavior
     validations:
       required: true
   - type: textarea
     id: source
     attributes:
-      label: 原文与译文（翻译问题必填）
-      description: 请移除密钥、私有仓库内容和个人信息。
+      label: Source and translation (required for translation errors)
+      description: Remove API keys, private-repository content, and personal information.

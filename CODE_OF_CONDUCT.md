@@ -1,9 +1,11 @@
-# 行为准则
+# Code of Conduct
 
-RepoLingo 希望建立一个友善、专业、重视证据的协作环境。
+[简体中文](CODE_OF_CONDUCT.zh-CN.md)
 
-参与者应尊重不同经验、语言背景与观点；讨论问题而非攻击个人；在翻译争议中提供具体语境；接受建设性反馈；避免骚扰、歧视、威胁、泄露隐私或其他不当行为。
+RepoLingo aims to maintain a welcoming, professional, and evidence-driven community.
 
-维护者可以编辑或移除违反准则的内容，并对持续破坏社区安全的参与者采取临时或永久限制。需要私下报告行为问题时，请通过仓库维护者公开提供的安全或联系渠道提交。
+Participants should respect differences in experience, language background, and perspective; discuss the work rather than attack people; provide concrete context when debating translations; accept constructive feedback; and avoid harassment, discrimination, threats, privacy violations, or other harmful conduct.
 
-本准则适用于仓库、Issue、Pull Request、Discussion 以及代表 RepoLingo 参与的公开社区空间。
+Maintainers may edit or remove content that violates these expectations and may temporarily or permanently restrict participants who repeatedly undermine community safety. Private conduct reports should use a security or contact channel publicly provided by the maintainer.
+
+This policy applies to the repository, Issues, Pull Requests, Discussions, and public spaces where someone represents RepoLingo.

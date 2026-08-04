@@ -1,35 +1,37 @@
-# RepoLingo 路线图
+# RepoLingo Roadmap
 
-本路线图表达方向，不承诺具体发布日期。优先级遵循：翻译安全与中文质量 > 本地能力 > 交互体验 > 扩展范围。
+[简体中文](ROADMAP.zh-CN.md)
 
-## v0.1.x：首发稳定性
+This roadmap describes direction, not promised dates. Priorities are: translation safety and Chinese quality, local capability, interaction quality, then broader scope.
 
-- 收集 Chrome 与 Edge 不同版本的 Translator API 兼容性反馈。
-- 补充真实 GitHub 页面场景和中文术语语料。
-- 修复动态导航、复杂 Markdown、表格与评论更新问题。
-- 完善键盘、屏幕阅读器、高对比度和缩放测试。
-- 准备 Chrome Web Store 与 Edge Add-ons 审核材料。
+## v0.1.x: release stability
 
-## v0.2：质量与可解释性
+- Collect Translator API compatibility feedback across Chrome and Edge versions.
+- Add real GitHub scenarios and Simplified Chinese terminology cases.
+- Fix dynamic navigation, complex Markdown, tables, and newly added comments.
+- Expand keyboard, screen-reader, high-contrast, and zoom testing.
+- Prepare Chrome Web Store and Edge Add-ons review materials.
 
-- 为低置信度译文提供更清楚的原文核验提示。
-- 扩展 Git、GitHub Actions、AI、前端与容器术语语境。
-- 提供用户可导入导出的本地术语偏好，仍不依赖云端账号。
-- 改进超长 README 和大量评论页面的队列调度。
+## v0.2: quality and explainability
 
-## 以后可能考虑
+- Make source-verification cues clearer for low-confidence translations.
+- Expand contextual terminology for Git, GitHub Actions, AI, frontend development, and containers.
+- Support import and export of local terminology preferences without a cloud account.
+- Improve queue scheduling for very long READMEs and comment-heavy pages.
 
-- 更多源语言和目标语言。
-- Firefox 兼容实现。
-- 经隐私评审后的可选本地短期缓存。
-- 可审核、可版本化的社区术语贡献流程。
+## Possible later work
 
-## v1 明确不做
+- Additional source and target languages.
+- Firefox support.
+- An optional short-lived local cache after a privacy review.
+- A reviewable, versioned community terminology contribution process.
 
-- 强制登录、云端账号或同步服务。
-- 自动调用付费翻译 API。
-- 遥测、广告或用户行为分析。
-- 修改代码、Diff、命令、路径或 GitHub 操作控件。
-- 打包大型本地模型或运行时 UI 框架。
+## Explicitly out of scope for v1
 
-欢迎通过 Issue 提交具体使用场景。方案必须说明对体积、隐私、权限和中文质量的影响。
+- Required sign-in, cloud accounts, or a sync service.
+- Automatic use of paid translation APIs.
+- Telemetry, advertising, or user-behavior analytics.
+- Modifying code, Diffs, commands, paths, or GitHub controls.
+- Bundling a large local model or runtime UI framework.
+
+Concrete use cases are welcome through Issues. Proposals should explain the expected impact on package size, privacy, permissions, and Simplified Chinese quality.

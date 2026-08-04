@@ -1,29 +1,31 @@
-# 更新日志
+# Changelog
 
-RepoLingo 的重要变更记录在此文件中。版本号遵循[语义化版本](https://semver.org/lang/zh-CN/)，格式参考 [Keep a Changelog](https://keepachangelog.com/zh-CN/1.1.0/)。
+[简体中文](CHANGELOG.zh-CN.md)
+
+All notable changes to RepoLingo are documented here. Versions follow [Semantic Versioning](https://semver.org/), and this file follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
-暂无。
+No unreleased changes.
 
 ## [0.1.0] - 2026-08-04
 
-### 新增
+### Added
 
-- 浏览器内置 Translator API 驱动的本地英文到简体中文翻译。
-- README、仓库简介、Issue、Pull Request、Discussion 与 Release 覆盖。
-- 原文、译文、双语和单段 `EN/中` 核验。
-- OpenAI、Gemini、DeepSeek 可选增强接口，默认全部关闭。
-- 技术实体保护、占位符校验、中文规范化与异常回退。
-- 120 条五类页面参考语料及自动质量门禁。
-- 中英文文档、隐私说明、安全政策、贡献指南和支持说明。
-- GitHub Pages 官网、CI、依赖更新与自动 Release 流程。
+- On-device English-to-Simplified-Chinese translation through the browser's built-in Translator API.
+- Coverage for READMEs, repository descriptions, Issues, Pull Requests, Discussions, and Releases.
+- Original, translated, bilingual, and per-block `EN/中` verification controls.
+- Optional OpenAI, Gemini, and DeepSeek providers, all disabled by default.
+- Technical-entity protection, placeholder validation, Chinese normalization, and safe fallback behavior.
+- 120 reference cases across five GitHub page types and an automated release quality gate.
+- English and Simplified Chinese project documentation, privacy and security policies, contribution guidance, and support notes.
+- GitHub Pages, CI, dependency updates, and automated GitHub Releases.
 
-### 安全
+### Security
 
-- 原始 DOM 始终保留，译文仅通过受控文本节点写入。
-- 内容脚本无法读取 API Key；可选服务域名按需授权。
-- 构建检查阻止远程脚本、危险执行和敏感信息进入产物。
+- The original DOM is preserved and translations are written only through controlled text nodes.
+- Content scripts cannot read API keys; optional provider host permissions are requested only when needed.
+- Build checks prevent remote scripts, dangerous execution, and sensitive data from entering release artifacts.
 
 [Unreleased]: https://github.com/agilawiegel-ux/repolingo-extension/compare/v0.1.0...HEAD
 [0.1.0]: https://github.com/agilawiegel-ux/repolingo-extension/releases/tag/v0.1.0

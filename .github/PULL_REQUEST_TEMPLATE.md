@@ -1,16 +1,16 @@
-## 改动
+## What changed
 
-<!-- 说明问题与解决方式。 -->
+<!-- Explain the problem and the focused solution. -->
 
-## 验证
+## Verification
 
-- [ ] `npm run verify` 通过
-- [ ] 原文、译文和双语模式已检查
-- [ ] 代码、链接、锚点、输入框与 Diff 未被改变
-- [ ] 明暗主题、键盘和减少动态效果已检查（如涉及 UI）
+- [ ] `npm run verify` passes
+- [ ] Original, translated, and bilingual modes were checked
+- [ ] Code, links, anchors, forms, and Diffs remain unchanged
+- [ ] Light/dark themes, keyboard use, and reduced motion were checked when relevant
 
-## 影响
+## Impact
 
-- 发布 ZIP 体积变化：
-- 权限或隐私变化：
-- 质量语料变化：
+- Release ZIP size change:
+- Permission or privacy change:
+- Quality-corpus change:

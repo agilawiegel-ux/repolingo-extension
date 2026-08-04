@@ -1,34 +1,36 @@
-# 贡献指南
+# Contributing to RepoLingo
 
-感谢你帮助 RepoLingo 变得更准确、更轻、更容易使用。
+[简体中文](CONTRIBUTING.zh-CN.md)
 
-## 开始之前
+Thank you for helping make RepoLingo more accurate, lightweight, and approachable.
 
-1. 搜索已有 Issue，避免重复工作。
-2. 功能改动先描述使用场景和对体积、隐私、翻译质量的影响。
-3. 术语调整请附真实 GitHub 语境，不接受脱离上下文的单词对照表。
+## Before you start
 
-## 本地开发
+1. Search existing Issues to avoid duplicate work.
+2. For feature changes, describe the use case and the expected impact on package size, privacy, permissions, and translation quality.
+3. For terminology changes, include a real GitHub context. Context-free word lists are not accepted.
+
+## Local development
 
 ```bash
 npm install
 npm run verify
 ```
 
-`npm run verify` 会执行类型检查、单元与 DOM 测试、构建安全检查、打包和体积预算。提交前必须全部通过。
+`npm run verify` runs type checks, unit and DOM tests, build-security checks, packaging, and size budgets. It must pass before a Pull Request is submitted.
 
-## 设计原则
+## Design principles
 
-- 本地翻译始终是无需配置的默认能力。
-- 增强翻译必须由用户主动开启，且清楚说明发送范围与费用归属。
-- 原始 DOM、代码、命令、路径、链接、锚点和 GitHub 操作行为不可被破坏。
-- 不引入运行时 UI 框架、远程字体、遥测或不必要权限。
-- 新功能应同时适配明暗主题、键盘操作和减少动态效果设置。
+- Local translation remains the zero-configuration default.
+- Enhanced translation must be explicitly enabled and must explain what is sent and who may charge for it.
+- The original DOM, code, commands, paths, links, anchors, and GitHub behavior must remain intact.
+- Do not add a runtime UI framework, remote font, telemetry, or unnecessary permission.
+- New UI must support light and dark themes, keyboard use, and reduced-motion settings.
 
-## 翻译质量改动
+## Translation-quality changes
 
-修改保护规则或术语库时，请在 `quality/corpus.json` 增加或更新参考案例，并添加能够先失败、后通过的测试。中文表达使用中国大陆开发者常用的简体中文；存在合理歧义时，优先保留英文术语或中英并列。
+When changing protection rules or terminology, add or update reference cases in `quality/corpus.json` and include a test that fails before the fix and passes afterward. Simplified Chinese should follow common Mainland Chinese developer usage. When a term remains reasonably ambiguous, prefer preserving the English term or showing both languages.
 
-## Pull Request
+## Pull Requests
 
-请保持改动聚焦，并说明：问题、解决方式、验证结果、体积变化和隐私影响。UI 改动请附明暗主题截图。提交即表示你同意按 MIT License 授权贡献。
+Keep changes focused. Explain the problem, solution, verification, package-size impact, and privacy impact. Include light- and dark-theme screenshots for UI changes. By submitting a contribution, you agree to license it under the MIT License.

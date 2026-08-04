@@ -1,11 +1,11 @@
 blank_issues_enabled: false
 contact_links:
-  - name: 使用帮助与常见问题
+  - name: Support and common questions
     url: https://github.com/agilawiegel-ux/repolingo-extension/blob/main/SUPPORT.md
-    about: 安装、兼容性和常见问题请先查看支持说明。
-  - name: 私密报告安全漏洞
+    about: Check installation, compatibility, and common troubleshooting steps first.
+  - name: Report a vulnerability privately
     url: https://github.com/agilawiegel-ux/repolingo-extension/security/advisories/new
-    about: API Key、权限绕过或脚本注入等安全问题请勿公开提交。
-  - name: 讨论与经验分享
+    about: Do not publicly disclose API-key exposure, permission bypasses, or script injection.
+  - name: Discussions
     url: https://github.com/agilawiegel-ux/repolingo-extension/discussions
-    about: 非 Bug 的使用交流可以在 Discussions 中进行。
+    about: Use Discussions for questions and experience sharing that are not reproducible bugs.

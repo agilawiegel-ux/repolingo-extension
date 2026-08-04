@@ -1,39 +1,41 @@
-# 发布前人工验收
+# Manual Release Checklist
 
-自动测试不能替代浏览器内置 Translator API、真实 GitHub 页面和第三方服务的人工验收。每个正式版本发布前应完成以下清单。
+[简体中文](MANUAL_TESTING.zh-CN.md)
+
+Automated tests cannot replace checks against the browser's Translator API, real GitHub pages, and optional providers. Complete this checklist before every stable release.
 
 ## Chrome 138+
 
-- [ ] 加载 `dist/`，Manifest 无错误。
-- [ ] 首次点击中文时展示语言包下载进度。
-- [ ] 下载完成后断网，README 仍可本地翻译。
-- [ ] 原文、译文、双语切换不改变滚动位置。
-- [ ] 标题锚点、链接、折叠区、表格和行内代码仍可用。
-- [ ] Issue、PR、Discussion 新增评论后只翻译新增内容。
-- [ ] PR Diff、文件树、日志、输入框和操作按钮不被翻译。
+- [ ] Load `dist/` with no Manifest errors.
+- [ ] Show language-pack download progress on the first translation request.
+- [ ] After the pack is ready, disconnect from the network and translate a README locally.
+- [ ] Switch between original, translated, and bilingual modes without changing the scroll position.
+- [ ] Keep heading anchors, links, disclosure widgets, tables, and inline code usable.
+- [ ] Translate only newly added comments on Issues, Pull Requests, and Discussions.
+- [ ] Exclude Pull Request Diffs, file trees, logs, inputs, and GitHub controls.
 
 ## Edge
 
-- [ ] 重复 Chrome 的本地语言包、离线、页面与动态导航场景。
+- [ ] Repeat the language-pack, offline, page-type, and dynamic-navigation checks from Chrome.
 
-## 可选增强服务
+## Optional providers
 
-- [ ] OpenAI：用户主动授权后测试连接与真实批次。
-- [ ] Gemini：用户主动授权后测试连接与真实批次。
-- [ ] DeepSeek：用户主动授权后测试连接与真实批次。
-- [ ] 禁用增强翻译后默认回到本地模式，不发生自动付费请求。
-- [ ] 错误 Key、无权限、限流和无效 JSON 都给出可恢复提示并保留原文。
+- [ ] OpenAI: grant permission explicitly, test the connection, and translate a real batch.
+- [ ] Gemini: grant permission explicitly, test the connection, and translate a real batch.
+- [ ] DeepSeek: grant permission explicitly, test the connection, and translate a real batch.
+- [ ] Disable enhanced translation and confirm that local mode resumes without paid requests.
+- [ ] Confirm that invalid keys, denied permissions, rate limits, and invalid JSON produce recoverable errors and preserve source text.
 
-## 界面与可访问性
+## UI and accessibility
 
-- [ ] GitHub 明暗主题下控件对比度和层级清晰。
-- [ ] 仅使用键盘可打开面板、切换模式、保存设置并关闭面板。
-- [ ] 系统开启“减少动态效果”后没有动画。
-- [ ] 125%、200% 浏览器缩放无内容遮挡。
-- [ ] Windows 高对比度与屏幕阅读器基础检查。
+- [ ] Confirm clear contrast and hierarchy in GitHub light and dark themes.
+- [ ] Open the panel, switch modes, save settings, and close the panel using only the keyboard.
+- [ ] Confirm that animations stop when the system requests reduced motion.
+- [ ] Check for clipping at 125% and 200% browser zoom.
+- [ ] Perform basic Windows high-contrast and screen-reader checks.
 
-## 安全与发布
+## Security and release
 
-- [ ] API Key 不出现在内容脚本、控制台、构建产物检索结果或 Issue 截图中。
-- [ ] GitHub Release 中的 ZIP 与 `.sha256` 校验一致。
-- [ ] ZIP ≤ 250 KB，解压后 ≤ 500 KB。
+- [ ] Ensure API keys do not appear in content scripts, the console, build artifacts, search output, or Issue screenshots.
+- [ ] Verify the GitHub Release ZIP against its `.sha256` file.
+- [ ] Confirm ZIP size is at most 250 KB and unpacked size is at most 500 KB.
