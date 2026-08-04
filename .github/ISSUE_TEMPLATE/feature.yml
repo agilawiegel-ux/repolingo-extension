@@ -1,0 +1,24 @@
+name: 功能建议
+description: 提议一个聚焦、轻量的新能力
+title: "[Feature] "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: 使用场景
+      description: 说明目前哪里不顺畅，以及谁会受益。
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 建议方案
+    validations:
+      required: true
+  - type: textarea
+    id: tradeoffs
+    attributes:
+      label: 体积、隐私和翻译质量影响
+    validations:
+      required: true

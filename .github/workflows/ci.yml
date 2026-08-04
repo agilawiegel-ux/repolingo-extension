@@ -1,0 +1,39 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run verify
+      - name: Chrome Manifest V3 smoke test
+        run: |
+          google-chrome --headless --no-sandbox --disable-gpu \
+            --user-data-dir=/tmp/repolingo-chrome \
+            --disable-extensions-except="$PWD/dist" \
+            --load-extension="$PWD/dist" \
+            --dump-dom chrome://version > /tmp/repolingo-chrome.html
+      - uses: actions/upload-artifact@v4
+        with:
+          name: repolingo-chromium-pr
+          path: release/*
+          if-no-files-found: error
+          retention-days: 14

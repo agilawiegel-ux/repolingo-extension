@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="RepoLingo：本地优先、中文优化的 GitHub 翻译扩展。无需 API Key，原文一键核验。">
+    <meta name="theme-color" content="#17202a">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="RepoLingo · GitHub 中文阅读层">
+    <meta property="og:description" content="本地优先、中文优化，无需 API Key，原文一键核验。">
+    <meta property="og:image" content="https://agilawiegel-ux.github.io/repolingo-extension/assets/repolingo-preview.png">
+    <meta property="og:url" content="https://agilawiegel-ux.github.io/repolingo-extension/">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://agilawiegel-ux.github.io/repolingo-extension/">
+    <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+    <title>RepoLingo · GitHub 中文阅读层</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body id="top">
+    <a class="skip-link" href="#main-content">跳到主要内容</a>
+    <header class="site-nav">
+      <a class="brand" href="#top" aria-label="RepoLingo 首页"><span class="brand-mark">R</span><strong>RepoLingo</strong></a>
+      <nav aria-label="主导航">
+        <a href="#principles">原则</a>
+        <a href="#install">安装</a>
+        <a class="nav-action" href="https://github.com/" data-repo-link>GitHub</a>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">LOCAL FIRST · 简体中文优化</p>
+          <h1 id="hero-title">让 GitHub，<br><span>更易读懂。</span></h1>
+          <p class="hero-lead">RepoLingo 在浏览器本地翻译 GitHub 的英文技术内容。打开即可使用，不要求 API Key；任何译文都能一键回到英文核验。</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#install">免费安装</a>
+            <a class="button secondary" href="https://github.com/" data-repo-link>查看源码 <span aria-hidden="true">→</span></a>
+          </div>
+          <dl class="quick-facts">
+            <div><dt>免费</dt><dd>无需订阅或账号</dd></div>
+            <div><dt>120</dt><dd>中文质量语料</dd></div>
+            <div><dt>&lt;250 KB</dt><dd>发布包预算</dd></div>
+          </dl>
+        </div>
+
+        <div class="demo-stage" aria-label="RepoLingo 交互演示">
+          <div class="window">
+            <div class="window-bar"><span></span><span></span><span></span><p>github.com/example/clear-docs</p></div>
+            <article class="readme">
+              <p class="repo-line"><b>example / clear-docs</b><span>Public</span></p>
+              <div class="file-line"><span class="file-icon">R</span><b>README.md</b><small>Make documentation easier to understand</small></div>
+              <h2 data-original="Build reliable tools without losing context" data-translated="在不丢失上下文的前提下构建可靠工具">Build reliable tools without losing context</h2>
+              <p data-original="This lightweight SDK keeps API names, commands, and code examples unchanged." data-translated="这个轻量级 SDK 会保持 API 名称、命令和代码示例不变。">This lightweight SDK keeps API names, commands, and code examples unchanged.</p>
+              <pre><code>npm install @example/clear-docs</code></pre>
+              <p data-original="Open a Pull Request after running the test suite." data-translated="运行测试套件后再发起 Pull Request（拉取请求）。">Open a Pull Request after running the test suite.</p>
+            </article>
+          </div>
+
+          <div class="demo-control">
+            <div class="control-bar">
+              <button id="demo-switch" class="language-switch" type="button" data-mode="original" aria-label="切换到中文译文">
+                <span>中文</span><i aria-hidden="true"><b></b></i><span>EN</span>
+              </button>
+              <button id="demo-menu" class="more" type="button" aria-expanded="true" aria-controls="demo-panel" aria-label="展开演示设置"><i></i><i></i><i></i></button>
+            </div>
+            <section id="demo-panel" class="control-panel">
+              <header><span class="mini-mark">R</span><div><b>RepoLingo</b><small>中文优先，原文随时可见</small></div></header>
+              <p class="status"><i></i><span><b>本地翻译</b><small>已就绪，可离线继续使用</small></span></p>
+              <label><span><b>双语对照</b><small>同时显示英文与中文</small></span><input id="demo-bilingual" type="checkbox"><i class="toggle"></i></label>
+              <p class="privacy">本地模式不会把页面内容发到网络。</p>
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section id="principles" class="principles" aria-labelledby="principles-title">
+        <div class="section-heading"><p class="eyebrow">THREE PROMISES</p><h2 id="principles-title">翻译是辅助层，<br>原文始终都在。</h2></div>
+        <div class="principle-grid">
+          <article><span>01</span><h3>默认留在本地</h3><p>浏览器内置语言包负责翻译。RepoLingo 不打包模型，不设云端账号，也不要求用户先配置服务。</p></article>
+          <article><span>02</span><h3>技术实体不碰</h3><p>代码、命令、URL、路径、版本、SHA 和标识符经过占位符保护；校验失败就显示原文。</p></article>
+          <article><span>03</span><h3>疑问一键核验</h3><p>原文、译文和双语模式即时切换，不刷新页面，不打断滚动、链接、锚点或折叠状态。</p></article>
+        </div>
+      </section>
+
+      <section class="scope">
+        <div class="scope-card included"><p class="eyebrow">会翻译</p><h2>自然语言内容</h2><ul><li>README 与仓库简介</li><li>Issue 与 Pull Request</li><li>Discussion 与回复</li><li>Release 说明</li></ul></div>
+        <div class="scope-divider" aria-hidden="true"><span>R</span></div>
+        <div class="scope-card excluded"><p class="eyebrow">不会翻译</p><h2>开发者原始结构</h2><ul><li>代码、命令与 Diff</li><li>文件树、日志与输入框</li><li>链接、标题锚点与按钮</li><li>GitHub 操作控件</li></ul></div>
+      </section>
+
+      <section class="enhanced">
+        <div><p class="eyebrow">OPTIONAL · 完全可选</p><h2>本地已经够用，<br>增强只是选择。</h2></div>
+        <div class="enhanced-copy"><p>OpenAI、Gemini 和 DeepSeek 接口已经预留，但默认全部关闭。只有你主动选择服务商、填写自己的 API Key 并授权对应域名后，经过保护的自然语言段落才会发送出去。</p><p class="note"><b>不付费也能完整使用。</b> RepoLingo 不会自动切换到付费 API，也不会采集遥测。</p></div>
+      </section>
+
+      <section id="install" class="install" aria-labelledby="install-title">
+        <p class="eyebrow">INSTALL</p>
+        <h2 id="install-title">四步开始阅读。</h2>
+        <ol>
+          <li><span>01</span><div><b>下载</b><p>从 GitHub Release 下载最新 ZIP 并解压。</p></div></li>
+          <li><span>02</span><div><b>打开扩展页</b><p>进入 chrome://extensions 或 edge://extensions。</p></div></li>
+          <li><span>03</span><div><b>加载</b><p>开启开发者模式，选择“加载已解压的扩展程序”。</p></div></li>
+          <li><span>04</span><div><b>点击中文</b><p>访问 GitHub，点右上角的瓷青双语滑片。</p></div></li>
+        </ol>
+        <a class="button primary" href="https://github.com/" data-release-link>前往 Releases</a>
+      </section>
+    </main>
+
+    <footer><a class="brand" href="#top"><span class="brand-mark">R</span><strong>RepoLingo</strong></a><p>MIT License · 本地优先 · 无遥测</p><a href="https://github.com/" data-repo-link>GitHub →</a></footer>
+    <script src="demo.js"></script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RepoLingo</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main>
+      <header>
+        <div class="mark">R</div>
+        <div>
+          <h1>RepoLingo</h1>
+          <p>本地优先的技术翻译</p>
+        </div>
+        <span class="local-badge"><i></i>本地</span>
+      </header>
+
+      <section class="status-card" aria-live="polite">
+        <i id="status-dot" aria-hidden="true"></i>
+        <div><strong id="status-title">正在连接页面</strong><span id="status-detail">打开 GitHub 仓库即可使用</span></div>
+        <span class="status-meta">LOCAL</span>
+      </section>
+
+      <div class="mode-grid" role="group" aria-label="显示模式">
+        <button type="button" data-mode="translated" aria-pressed="false">中文</button>
+        <button type="button" data-mode="bilingual" aria-pressed="false">双语</button>
+        <button type="button" data-mode="original" aria-pressed="false">原文</button>
+      </div>
+
+      <button class="primary" id="translate" type="button">翻译当前页面</button>
+      <button class="settings" id="settings" type="button"><span><b>增强翻译</b><small>完全可选，需要时再配置</small></span><i aria-hidden="true">→</i></button>
+      <p class="privacy"><i aria-hidden="true">✓</i><span><b>本地模式免费使用</b><small>页面内容默认不会离开浏览器</small></span></p>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

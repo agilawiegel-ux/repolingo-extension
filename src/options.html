@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>RepoLingo 设置</title>
+    <link rel="stylesheet" href="options.css">
+  </head>
+  <body>
+    <main>
+      <nav><div class="mark">R</div><strong>RepoLingo</strong><span>设置</span></nav>
+      <header class="hero">
+        <p class="eyebrow">LOCAL FIRST · 本地优先</p>
+        <h1>打开即可翻译，<br>不需要付费。</h1>
+        <p>RepoLingo 默认使用浏览器内置语言包，无需账号或 API Key。只有你主动开启增强翻译时，文本才会发送给所选服务商。</p>
+      </header>
+
+      <section class="local-card">
+        <div class="signal"><i></i><span></span></div>
+        <div><strong>本地翻译是默认方式</strong><p>无需账号、无需 API Key，语言包准备完成后可离线使用。</p></div>
+        <span class="badge"><i></i>默认开启</span>
+      </section>
+
+      <section class="enhance-card">
+        <div class="section-head">
+          <div><p class="eyebrow">OPTIONAL · 完全可选</p><h2>增强翻译</h2><p>追求更高复杂语义质量时再配置，默认关闭。</p></div>
+          <label class="master-switch"><input id="enhanced" type="checkbox"><i></i><span>启用</span></label>
+        </div>
+
+        <div id="provider-settings" hidden>
+          <div class="notice"><strong>发送范围</strong><span>只发送已过滤的自然语言段落；代码、命令、路径和受保护术语不会发送。</span></div>
+          <fieldset>
+            <legend>选择服务</legend>
+            <div class="provider-grid">
+              <label><input type="radio" name="provider" value="openai"><span><b>OpenAI</b><small>Responses API</small></span></label>
+              <label><input type="radio" name="provider" value="gemini"><span><b>Gemini</b><small>Interactions API</small></span></label>
+              <label><input type="radio" name="provider" value="deepseek"><span><b>DeepSeek</b><small>Chat Completions</small></span></label>
+            </div>
+          </fieldset>
+
+          <div class="fields">
+            <label><span>模型</span><input id="model" type="text" autocomplete="off"></label>
+            <label><span>API Key</span><input id="api-key" type="password" autocomplete="off" spellcheck="false"></label>
+          </div>
+          <p class="key-note">Key 仅保存在此浏览器的扩展受信任存储中，GitHub 页面无法读取。</p>
+          <div class="actions">
+            <button id="test" class="secondary" type="button">测试连接</button>
+            <button id="save" class="primary" type="button">保存设置</button>
+          </div>
+        </div>
+      </section>
+
+      <div id="message" class="message" role="status" aria-live="polite"></div>
+      <footer>RepoLingo 不包含遥测、广告或云端账号系统。</footer>
+    </main>
+    <script src="options.js"></script>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+node_modules/
+dist/
+release/
+outputs/
+work/
+coverage/
+.rolepod-uiproof/
+.codex/
+.env
+.env.local
+*.log
+*.zip
+*.sha256
+.DS_Store
+Thumbs.db

@@ -1,0 +1,68 @@
+name: Release
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: release-${{ github.repository }}
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Resolve package version
+        id: version
+        shell: bash
+        run: |
+          tag="v$(node -p 'require("./package.json").version')"
+          echo "tag=$tag" >> "$GITHUB_OUTPUT"
+      - name: Check whether release already exists
+        id: existing
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ steps.version.outputs.tag }}
+        run: |
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            echo "exists=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "exists=false" >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/setup-node@v4
+        if: steps.existing.outputs.exists != 'true'
+        with:
+          node-version: 22
+          cache: npm
+      - if: steps.existing.outputs.exists != 'true'
+        run: npm ci
+      - if: steps.existing.outputs.exists != 'true'
+        run: npm run verify
+      - name: Publish GitHub Release
+        if: steps.existing.outputs.exists != 'true'
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ steps.version.outputs.tag }}
+        run: |
+          notes=".github/release-notes/$TAG.md"
+          if [[ -f "$notes" ]]; then
+            gh release create "$TAG" release/* \
+              --target "$GITHUB_SHA" \
+              --title "RepoLingo $TAG" \
+              --notes-file "$notes" \
+              --latest
+          else
+            gh release create "$TAG" release/* \
+              --target "$GITHUB_SHA" \
+              --title "RepoLingo $TAG" \
+              --generate-notes \
+              --latest
+          fi

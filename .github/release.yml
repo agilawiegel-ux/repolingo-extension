@@ -1,0 +1,25 @@
+changelog:
+  exclude:
+    labels:
+      - ignore-for-release
+  categories:
+    - title: 新功能
+      labels:
+        - enhancement
+        - feature
+    - title: 修复
+      labels:
+        - bug
+        - fix
+    - title: 翻译质量
+      labels:
+        - translation
+        - quality
+    - title: 文档与工程
+      labels:
+        - documentation
+        - dependencies
+        - ci
+    - title: 其他变更
+      labels:
+        - "*"
