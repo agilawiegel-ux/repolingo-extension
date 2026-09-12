@@ -19,7 +19,7 @@
   "devDependencies": {
     "@types/chrome": "^0.2.7",
     "@types/node": "^24.10.0",
-    "esbuild": "^0.25.12",
+    "esbuild": "^0.28.2",
     "fflate": "^0.8.2",
     "linkedom": "^0.18.12",
     "pngjs": "^7.0.0",
