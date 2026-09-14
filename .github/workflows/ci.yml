@@ -31,7 +31,7 @@ jobs:
             --disable-extensions-except="$PWD/dist" \
             --load-extension="$PWD/dist" \
             --dump-dom chrome://version > /tmp/repolingo-chrome.html
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7
         with:
           name: repolingo-chromium-pr
           path: release/*
